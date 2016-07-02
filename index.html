@@ -8,7 +8,7 @@
   <meta name="description" content="cubetech">
   <meta name="author" content="suzunghia">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -66,7 +66,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) { return; }
         js = d.createElement(s); js.id = id;
-        js.src = "http://connect.facebook.net/en_US/sdk.js";
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
@@ -99,7 +99,7 @@
         FB.api('/me', function (response) {
             $('#user_name').text(response.name);
             fid = response.id;
-            $('#user_avatar').attr("src", "http://graph.facebook.com/" + fid + "/picture");
+            $('#user_avatar').attr("src", "//graph.facebook.com/" + fid + "/picture");
         });
         FB.api('/me/accounts', function (response) {
             for (var i = 0; i < response.data.length; i++) {
